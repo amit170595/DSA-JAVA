@@ -1,0 +1,4 @@
+x
+a
+We are learning File Handling in Java
+abcd
