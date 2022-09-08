@@ -10,7 +10,10 @@ public class HouseNumber {
             int t;
             t = sc.nextInt();
             while (t-- > 0) {
-                long n = sc.nextLong();
+                int n = sc.nextInt();
+                int a[]=new int[n];
+                for(int i=0;i<n;i++)
+                    a[i]= sc.nextInt();
                 long number = 0;
                 for (int i = 1; i <= n; i *= 10)
                     number += (n - i + 1);
