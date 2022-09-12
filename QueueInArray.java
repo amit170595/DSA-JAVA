@@ -1,17 +1,17 @@
 
-class Queue {
+class Queueclass {
     private static int front;
     private static int rear;
     private static int capacity;
     private static int queue[];
 
-    Queue(int c) {
+    Queueclass(int c) {
         front = rear = 0;
         capacity = c;
         queue = new int[capacity];
     }
 
-    void queueEnqueue(int data) {
+    void Enqueue(int data) {
         if (capacity == rear) {
             System.out.printf("\nQueue is full\n");
             return;
@@ -22,10 +22,10 @@ class Queue {
         return;
     }
 
-    void queueDequeue() {
+    int Dequeue() {
         if (front == rear) {
             System.out.printf("\nQueue is empty\n");
-            return;
+            return -1;
         } else {
             for (int i = 0; i < rear - 1; i++) {
                 queue[i] = queue[i + 1];
@@ -34,10 +34,10 @@ class Queue {
                 queue[rear] = 0;
             rear--;
         }
-        return;
+        return rear;
     }
 
-    void queueDisplay() {
+    void Display() {
         int i;
         if (front == rear) {
             System.out.printf("\nQueue is Empty\n");
@@ -58,29 +58,26 @@ class Queue {
         return;
     }
 
-    public void queueEnqueue(Node key) {
-    }
-
     public boolean isEmpty() {
-        return false;
+        return front == 0;    
     }
 }
 
 public class QueueInArray {
     public static void main(String[] args) {
-        Queue q = new Queue(4);
-        q.queueDisplay();
-        q.queueEnqueue(20);
-        q.queueEnqueue(30);
-        q.queueEnqueue(40);
-        q.queueEnqueue(50);
-        q.queueDisplay();
-        q.queueEnqueue(60);
-        q.queueDisplay();
-        q.queueDequeue();
-        q.queueDequeue();
+        Queueclass q = new Queueclass(4);
+        q.Display();
+        q.Enqueue(20);
+        q.Enqueue(30);
+        q.Enqueue(40);
+        q.Enqueue(50);
+        q.Display();
+        q.Enqueue(60);
+        q.Display();
+        q.Dequeue();
+        q.Dequeue();
         System.out.printf("\nafter two node deletion\n\n");
-        q.queueDisplay();
+        q.Display();
         q.queueFront();
     }
 }
