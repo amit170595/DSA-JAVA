@@ -67,6 +67,14 @@ class Graph {
             DFS(node1);
         }
     }
+
+    void DFT() {
+        for (int i = 0; i < numberNode; i++) {
+            if (!nodeList[i].visited) {
+                DFS(i);
+            }
+        }
+    }
 }
 
 public class GraphMain {
@@ -88,10 +96,11 @@ public class GraphMain {
         g.addEdge(4, 5);
         g.addEdge(4, 6);
         g.addEdge(5, 7);
-        System.out.println("Visited Nodes are: ");
+        System.out.println("Visited DFS Nodes are: ");
         g.DFS(0);
-        System.out.println("Visited Nodes are: ");
+        System.out.println("Visited BFS Nodes are: ");
         g.BFS();
-
+        System.out.println("Visited DFT Nodes are: ");
+        g.DFT();
     }
 }
