@@ -1,6 +1,6 @@
 public class LinkedListMain {
     public static void main(String[] args) {
-        LinkedList list = new LinkedList();
+        LinkedListMethods list = new LinkedListMethods();
         list.InsertAtBeg(5);
         list.PrintList();
         list.InsertAtEnd(6);

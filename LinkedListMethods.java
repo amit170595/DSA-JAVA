@@ -1,4 +1,4 @@
-public class LinkedList {
+public class LinkedListMethods {
     Node head = null;
 
     void InsertAtBeg(int data) {
