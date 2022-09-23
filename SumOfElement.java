@@ -1,3 +1,4 @@
+import java.math.BigInteger;
 import java.util.Scanner;
 
 public class SumOfElement {
@@ -6,11 +7,13 @@ public class SumOfElement {
             int t = sc.nextInt();
             while (t-- > 0) {
                 int size = sc.nextInt();
-                int myArray[] = new int[size];
-                int sum = 0;
+                String arr[] = new String[size];
+                for (int i = 0; i < size; i++)
+                    arr[i] = sc.next();
+                BigInteger sum = new BigInteger("0");
                 for (int i = 0; i < size; i++) {
-                    myArray[i] = sc.nextInt();
-                    sum = sum + myArray[i];
+                    BigInteger j = new BigInteger(arr[i]);
+                    sum = sum.add(j);
                 }
                 System.out.println(sum);
             }
