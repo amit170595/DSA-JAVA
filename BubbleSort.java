@@ -32,6 +32,5 @@ public class BubbleSort {
                 ob.printArray(arr);
             }
         }
-
     }
 }
