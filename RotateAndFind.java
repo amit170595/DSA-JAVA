@@ -1,7 +1,6 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class MaximumChocolate {
+public class RotateAndFind {
     public static void main(String[] args) {
         try (Scanner sc = new Scanner(System.in)) {
             int t = sc.nextInt();
@@ -10,21 +9,14 @@ public class MaximumChocolate {
                 long arr[] = new long[n];
                 for (int i = 0; i < n; i++)
                     arr[i] = sc.nextLong();
-                Arrays.sort(arr);
-                int sum1 = 0;
-                int sum2 = 0;
+                long k = sc.nextLong();
+                int ans = -1;
                 for (int i = 0; i < n; i++) {
-                    if (i % 2 != 0) {
-                        sum1 += arr[i];
-                    } else {
-                        sum2 += arr[i];
+                    if (arr[i] == k) {
+                        ans = i;
                     }
                 }
-                if (sum1 > sum2) {
-                    System.out.println(sum1);
-                } else {
-                    System.out.println(sum2);
-                }
+                System.out.println(ans);
             }
         }
     }
