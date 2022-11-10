@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class FebonacciSeriesRecursion {
+public class FibonacciSeriesRecursion {
     public static void main(String[] args) {
         try (Scanner sc = new Scanner(System.in)) {
             int t = sc.nextInt();
